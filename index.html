@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Mood Tracker</title>
+</head>
+
+<body>
+    <h1 id="app-title">Mood Diary</h1>
+
+    <div id="mood-selection" class="section">
+        <h3 id="mood-heading">What's Your Mood Today?</h3>
+        <div id="mood-buttons" class="mood-buttons">
+            <span class="mood-btn">😊 Happy</span>
+            <span class="mood-btn">😢 Sad</span>
+            <span class="mood-btn">😐 Neutral</span>
+            <span class="mood-btn">😁 Excited</span>
+            <span class="mood-btn">😡 Angry</span>
+            <span class="mood-btn">😴 Tired</span>
+            <span class="mood-btn">😨 Anxious</span>
+            <span class="mood-btn">🤒 Sick</span>
+        </div>
+    </div>
+    <div id="mood-display">select mood to show your mood here</div>
+    <button id="save-mood-btn" class="action-btn">Lock the Mood</button>
+
+    <div id="checkButtons"> 
+        <button id="todaysMood"  class="action-btn">Today's Mood</button>
+        <button id="weeklyMood" class="action-btn">Last seven Days Mood</button>
+        <button id="monthlyMood" class="action-btn">Monthly mood</button>
+    </div>
+
+    <div id="dayMood">
+
+    </div>
+
+    <div id="weekMood">
+        <h2 class="weeklyHeading">your Weekly mood list is:</h2>
+        <div class="moodList"></div>
+        <button class="closeBtn">close Log</button>
+    </div>
+
+
+    <div id="Calendar">
+        <div id="headerCalender">
+            <button id="previousMonth">◀️</button>
+            <h3 id="monthYear">Month year</h3>
+            <button id="nextMonth">▶️</button>
+        </div>
+        <div id="calendarDays"></div>
+        <div id="calendarGrid"></div>
+    </div>
+    
+
+    <script src="script.js"></script>
+</body>
+
+</html>
