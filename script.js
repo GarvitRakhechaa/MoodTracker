@@ -44,21 +44,21 @@ moodBtns.forEach((element, index) => {
 
 
 const now = new Date()
-let currentMonth = now.getMonth()
+let currentMonth = now.getMonth()  
 let currentYear = now.getFullYear()
 const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
 let dayFormat = `${now.getFullYear()}-${now.getMonth() + 1}-${now.getDate()}`
-//'2025-3-18'
+//'2025-3-19'
 
 monthYear.innerHTML = `${monthNames[currentMonth]} ${currentYear}`
 
 
 previousMonth.addEventListener('click', function(){
-    currentMonth--
+    currentMonth-- 
     if(currentMonth <0){
-        currentMonth = 11
+        currentMonth = 11 
         currentYear--    
     }
     monthYear.innerHTML = `${monthNames[currentMonth]} ${currentYear}`
@@ -91,7 +91,7 @@ days.map((item) => {
 
 function MakeCalender(){
     calendarGrid.innerHTML = ""
-    const totalDays = new Date(currentYear,currentMonth + 1,0).getDate()  //previous month ki last date ko represent karega like 31 hai to current month me 31 days honge currentmonth +1 esliye kiyya taki ye next month ban jaye and 0 hai wo previous month ka last day hai
+    const totalDays = new Date(currentYear,currentMonth+1,0).getDate()  //previous month ki last date ko represent karega like 31 hai to current month me 31 days honge currentmonth +1 esliye kiyya taki ye next month ban jaye and 0 hai wo previous month ka last day hai
     console.log(totalDays)
 
     const firstDateStarts = new Date(currentYear, currentMonth, 1).getDay(); // ye new date banayega and uska day nikalega ki konse din pr currentmonth ki 1 tarikh aati hai and iski value 0-6 tk hogi sunday-saturday
